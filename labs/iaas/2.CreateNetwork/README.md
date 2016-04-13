@@ -42,7 +42,7 @@ To create a network with PowerShell, follow these steps:
 
 First, if you haven't already done it, create a new Resource Group:
 ```powershell
-New-AzureRmResourceGroup -Name globalazure -Location "West Europe"
+New-AzureRmResourceGroup -Name "globalazure" -Location "West Europe"
 
 ResourceGroupName : globalazure
 Location          : westeurope
@@ -63,5 +63,41 @@ $dmzSubnetCfg = New-AzureRmVirtualNetworkSubnetConfig -Name "DMZ" -AddressPrefix
 
 And finally we will create our network, by using the subnet configurations we just created above:
 ```powershell
-New-AzureRmVirtualNetwork -Name vnet01 -Location "West Europe" -ResourceGroupName "Network" -AddressPrefix $addressPrefix -Subnet $backendSubnetCfg, $dmzSubnetCfg
+New-AzureRmVirtualNetwork -Name "vnet01" -Location "West Europe" -ResourceGroupName "Network" -AddressPrefix $addressPrefix -Subnet $backendSubnetCfg, $dmzSubnetCfg
+
+Name              : vnet01
+ResourceGroupName : Network
+Location          : westeurope
+Id                : /subscriptions/7bce381f-79b3-4521-b36e-138932735300/resourceGroups/Network/providers/Microsoft.Network/virtualNetworks/vnet
+                    01
+Etag              : W/"89252ba2-b211-4cf4-8503-8c7079d04bbe"
+ResourceGuid      : 318213c5-13d8-44ad-87fc-8b14031c5d56
+ProvisioningState : Succeeded
+Tags              : 
+AddressSpace      : {
+                      "AddressPrefixes": [
+                        "192.168.0.0/24"
+                      ]
+                    }
+DhcpOptions       : {}
+Subnets           : [
+                      {
+                        "Name": "Internal",
+                        "Etag": "W/\"89252ba2-b211-4cf4-8503-8c7079d04bbe\"",
+                        "Id": "/subscriptions/7bce381f-79b3-4521-b36e-138932735300/resourceGroups/Network/providers/Microsoft.Network/virtualNe
+                    tworks/vnet01/subnets/Internal",
+                        "AddressPrefix": "192.168.0.0/25",
+                        "IpConfigurations": [],
+                        "ProvisioningState": "Succeeded"
+                      },
+                      {
+                        "Name": "DMZ",
+                        "Etag": "W/\"89252ba2-b211-4cf4-8503-8c7079d04bbe\"",
+                        "Id": "/subscriptions/7bce381f-79b3-4521-b36e-138932735300/resourceGroups/Network/providers/Microsoft.Network/virtualNe
+                    tworks/vnet01/subnets/DMZ",
+                        "AddressPrefix": "192.168.0.128/26",
+                        "IpConfigurations": [],
+                        "ProvisioningState": "Succeeded"
+                      }
+                    ]
 ```

@@ -39,7 +39,7 @@ Now click **Create** and wait a minute or two, until your account has been creat
 If you prefer PowerShell, you will need to create a new Resource Group:
 
 ```powershell
-New-AzureRmResourceGroup -Name globalazure -Location "West Europe"
+New-AzureRmResourceGroup -Name "globalazure" -Location "West Europe"
 
 ResourceGroupName : globalazure
 Location          : westeurope
@@ -51,7 +51,7 @@ ResourceId        : /subscriptions/7bce381f-79b3-4521-b36e-138932735300/resource
 Next we will create the Storage Account, just like in the portal, we need to give it a name, select a type and a location:
 
 ```powershell
-New-AzureRmStorageAccount -ResourceGroupName globalazure -Name globalazure12345 -Type Standard_LRS -Location "West Europe"
+New-AzureRmStorageAccount -ResourceGroupName "globalazure" -Name "globalazure12345" -Type Standard_LRS -Location "West Europe"
 
 ResourceGroupName   : globalazure
 StorageAccountName  : globalazure12345
