@@ -1,7 +1,7 @@
 # Create Azure Storage Account
 
 This lab will walk you through creating a Storage Account in Azure. 
-First of all, open the [Azure Portal](http://portal.azure.com) or log in through [PowerShell](LINK).
+First of all, open the [Azure Portal](http://portal.azure.com) or log in through [PowerShell](../0.InstallPowerShell/README.md).
 
 [Create with portal](#using-the-portal)
 
