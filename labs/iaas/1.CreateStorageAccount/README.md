@@ -3,6 +3,8 @@
 This lab will walk you through creating a Storage Account in Azure. 
 First of all, open the [Azure Portal](http://portal.azure.com) or log in through [PowerShell](LINK).
 
+## Using the portal
+
 When using the portal, go to **New** -> **Data + Storage** -> **Storage Account**:
 ![storageaccount1](./content/storageaccount1.png)
 
@@ -26,3 +28,12 @@ Here we have to fill out some information:
     
 Now click **Create** and wait a minute or two, until your account has been created:
 ![storageaccount3](./content/storageaccount3.png)
+
+
+## Using PowerShell
+
+If you prefer PowerShell, you will need to create a new Resource Group:
+
+```powershell
+New-AzureRmResourceGroup -Name globalazure -Location "West Europe"
+´´´
