@@ -36,4 +36,4 @@ If you prefer PowerShell, you will need to create a new Resource Group:
 
 ```powershell
 New-AzureRmResourceGroup -Name globalazure -Location "West Europe"
-´´´
+```
