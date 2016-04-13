@@ -5,7 +5,7 @@ First of all, open the [Azure Portal](http://portal.azure.com) or log in through
 
 [Create with portal](#using-the-portal)
 
-[Create with PowerShellPowerShell](#Header2)
+[Create with PowerShellPowerShell](#Using-PowerShell)
 
 ## Using the portal
 
