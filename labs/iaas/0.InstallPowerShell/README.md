@@ -14,3 +14,5 @@ To log in to Azure through PowerShell, use the following command:
 ```powershell
 Login-AzureRmAccount
 ```
+
+This will open a login window, where you enter your credentials to Azure. 
