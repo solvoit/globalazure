@@ -22,7 +22,7 @@ $pip = New-AzureRmPublicIpAddress -Name ($vmName + "pip") -ResourceGroupName "gl
 
 To connect the Network Interface we are about to create, we will first need for find the ID of our subnet. The easiest way to do this is by getting the network:
 ```powershell
-Get-AzureRmVirtualNetwork -ResourceGroupName "globalazure" -Name <VIRTUAL NETWORK NAME> #If you follow the lab before this one, the name should be vnet01
+$vnet = Get-AzureRmVirtualNetwork -ResourceGroupName "globalazure" -Name <VIRTUAL NETWORK NAME> #If you follow the lab before this one, the name should be vnet01
 ```
 
 Next create a Network Interface. This command will assign the Public IP we just created to a new Network Interface:
