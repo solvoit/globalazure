@@ -7,3 +7,10 @@ Install-AzureRM
 ``` 
 
 *Note: This requires Windows Management Framework 5, which is included in Windows 10.*
+
+
+To log in to Azure through PowerShell, use the following command:
+
+```powershell
+Login-AzureRmAccount
+```
